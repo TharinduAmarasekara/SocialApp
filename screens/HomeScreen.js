@@ -1,13 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  ScrollView,
-  Text,
-  StyleSheet,
-  FlatList,
-  SafeAreaView,
-  Alert,
-} from 'react-native';
+import { View, ScrollView, Text, StyleSheet, FlatList, SafeAreaView, Alert,} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';

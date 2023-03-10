@@ -93,12 +93,15 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.social_app"
-    defaultConfig {
-        applicationId "com.social_app"
+    
+      defaultConfig {
+        applicationId "com.socialapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
     }
 
     splits {
@@ -166,6 +169,10 @@ dependencies {
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
 
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
