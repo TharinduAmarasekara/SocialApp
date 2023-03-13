@@ -1,12 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {
-  View,
-  Text,
-  Platform,
-  StyleSheet,
-  Alert,
-  ActivityIndicator,
-} from 'react-native';
+import { View, Text, Platform, StyleSheet, Alert, ActivityIndicator, } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ImagePicker from 'react-native-image-crop-picker';
@@ -14,14 +7,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import storage from '@react-native-firebase/storage';
 import firestore from '@react-native-firebase/firestore';
 
-import {
-  InputField,
-  InputWrapper,
-  AddImage,
-  SubmitBtn,
-  SubmitBtnText,
-  StatusWrapper,
-} from '../styles/AddPost';
+import { InputField, InputWrapper, AddImage, SubmitBtn, SubmitBtnText, StatusWrapper, } from '../styles/AddPost';
 
 import { AuthContext } from '../navigation/AuthProvider';
 

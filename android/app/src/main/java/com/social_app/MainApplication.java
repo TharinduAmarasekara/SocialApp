@@ -9,6 +9,8 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
 import java.util.List;
+import io.invertase.firebase.firestore.ReactNativeFirebaseFirestorePackage;
+import io.invertase.firebase.analytics.ReactNativeFirebaseAnalyticsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -27,6 +29,12 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           return packages;
         }
+        protected List<ReactPackage> getPackages() {
+           return Arrays.asList(
+           new MainReactPackage(),
+           new ReactNativeFirebaseAnalyticsPackage(),
+           )
+        }
 
         @Override
         protected String getJSMainModuleName() {
@@ -43,7 +51,13 @@ public class MainApplication extends Application implements ReactApplication {
           return BuildConfig.IS_HERMES_ENABLED;
         }
       };
-
+        protected List<ReactPackage> getPackages() {
+          return Arrays.asList(
+          new MainReactPackage(),
+          new ReactNativeFirebaseFirestorePackage(),
+        )
+      }
+```// ..
   @Override
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
